@@ -23,7 +23,7 @@ Python is a **dynamically-typed** language: this kind of checking is deferred un
 
 ## Static checking, dynamic checking, no checking
 
-There are two interesting examples:
+There are three interesting examples:
 
 ```java
 int a = 8;
@@ -40,6 +40,18 @@ double c = 8 / 0;
 ```
 
 **No checking:** special value POSITIVE_INFINITY
+
+```java
+int b;
+if (true) {
+    b = 3;
+} else {
+    //b = 2;
+}
+b *= 4; 
+```
+
+**static checking:** the compiler will judge every branch to see whether b is assigned or not
 
 ## Arrays and Collectins
 
